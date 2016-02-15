@@ -5,8 +5,15 @@ import com.android.volley.VolleyError;
 /**
  * Created by ShenYan on 15/12/17. Project VolleyTestDemo
  */
-public interface JsonResponseListener<T> {
-    void onResponse(T response);
+public class JsonResponseListener implements ResponseListener<Object> {
 
-    void onError(VolleyError error);
+    @Override
+    public void onResponse(Object response) {
+
+    }
+
+    @Override
+    public void onError(VolleyError error) {
+
+    }
 }
