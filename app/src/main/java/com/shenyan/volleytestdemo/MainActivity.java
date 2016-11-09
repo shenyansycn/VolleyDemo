@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +46,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Logger.i("onClick GO");
-                StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://graph.facebook.com/130757673948254/picture?type=square", new Response.Listener<String>() {
+
+               String Url = "http://graph.facebook.com/130757673948254/picture?type=square";
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, Url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
